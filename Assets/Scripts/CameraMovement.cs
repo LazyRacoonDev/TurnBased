@@ -6,7 +6,8 @@ public class CameraControl : MonoBehaviour
     public float zoomSpeed = 20f;          // Velocidad de zoom
     public float minZoom = 5f;             // Límite inferior de zoom (distancia mínima)
     public float maxZoom = 50f;            // Límite superior de zoom (distancia máxima)
-    
+    public float rotationSpeed = 100f;     // Velocidad de rotación de la cámara
+
     public GameObject targetObject;        // Objeto objetivo al que la cámara se centrará
     private bool isCentered = false;       // Estado de si la cámara está centrada sobre el objetivo
     private Vector3 fixedOffset;           // Offset fijo para mantener una distancia constante al seguir
@@ -50,6 +51,12 @@ public class CameraControl : MonoBehaviour
             float newZoom = Mathf.Clamp(transform.position.y - scroll * zoomSpeed, minZoom, maxZoom);
             transform.position = new Vector3(transform.position.x, newZoom, transform.position.z);
         }
+
+        // Rotar la cámara al pulsar la rueda del ratón
+        if (Input.GetMouseButton(2)) // Botón central del ratón
+        {
+            RotateCamera();
+        }
     }
 
     // Método para seguir al objetivo manteniendo un offset fijo
@@ -58,5 +65,22 @@ public class CameraControl : MonoBehaviour
         // Actualizar la posición de la cámara en función de la posición del objetivo y el offset fijo
         transform.position = targetObject.transform.position + fixedOffset;
         transform.LookAt(targetObject.transform);
+    }
+
+    // Método para rotar la cámara
+    void RotateCamera()
+    {
+        float mouseX = Input.GetAxis("Mouse X");
+        float mouseY = Input.GetAxis("Mouse Y");
+
+        // Rotar alrededor del eje Y (horizontal) y X (vertical)
+        transform.RotateAround(transform.position, Vector3.up, mouseX * rotationSpeed * Time.deltaTime);
+        transform.RotateAround(transform.position, transform.right, -mouseY * rotationSpeed * Time.deltaTime);
+
+        // Mantener el offset actualizado si la cámara está centrada
+        if (isCentered && targetObject != null)
+        {
+            fixedOffset = transform.position - targetObject.transform.position;
+        }
     }
 }
