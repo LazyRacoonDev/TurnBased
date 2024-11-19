@@ -504,8 +504,8 @@ MonoBehaviour:
   - {fileID: 1904052577714087461, guid: b7f5f0df13c6bff428dfdd79b009c5b2, type: 3}
   faction1SpawnZone: {x: -11.17, y: 0.26, z: 9.99}
   faction2SpawnZone: {x: 11.78, y: 0.26, z: -11.47}
-  spawnRadius: 3
-  unitsPerFaction: 3192
+  spawnRadius: 3.61
+  unitsPerFaction: 20
 --- !u!4 &1436453077
 Transform:
   m_ObjectHideFlags: 0
