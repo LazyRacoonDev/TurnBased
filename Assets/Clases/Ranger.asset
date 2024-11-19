@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   className: Ranger
   maxHealth: 120
-  attackDamage: 10
-  attackRange: 5
+  attackDamage: 4
+  attackRange: 10
   moveSpeed: 5
   attackCooldown: 1
