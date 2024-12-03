@@ -13,11 +13,9 @@ GameObject:
   - component: {fileID: 4106689985360088206}
   - component: {fileID: 4358889229016873360}
   - component: {fileID: 1828425329580121663}
-  - component: {fileID: 633001262396537083}
-  - component: {fileID: 4343082212586182931}
   m_Layer: 0
   m_Name: Ranger
-  m_TagString: faction2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,32 +131,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &633001262396537083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1904052577714087461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e1fa8ef488412a44b879edafec89319, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterClassConfig: {fileID: 11400000, guid: 3f4e4442ef097154ab234e587bc10f14, type: 2}
---- !u!114 &4343082212586182931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1904052577714087461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09ae2e6fd39e656469d49b3066668e2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!1001 &7314092424077886697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -169,23 +141,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1042d88cbb47fc64da880d856fc6c110, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.19070965
+      value: 0.10727284
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1042d88cbb47fc64da880d856fc6c110, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.19070965
+      value: 0.10727284
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1042d88cbb47fc64da880d856fc6c110, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.19070965
+      value: 0.10727284
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1042d88cbb47fc64da880d856fc6c110, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.447
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1042d88cbb47fc64da880d856fc6c110, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.034
+      value: -0.005
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1042d88cbb47fc64da880d856fc6c110, type: 3}
       propertyPath: m_LocalPosition.z
@@ -218,10 +190,6 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1042d88cbb47fc64da880d856fc6c110, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -5477749408508380018, guid: 1042d88cbb47fc64da880d856fc6c110, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1042d88cbb47fc64da880d856fc6c110, type: 3}
       propertyPath: m_Name
